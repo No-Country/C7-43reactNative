@@ -1,20 +1,39 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import 'react-native-gesture-handler'
+import {  Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Home from './Screens/Home';
+import Login from './Screens/Login';
+import Extra from './Screens/Extra';
+import styles from './Styles';
+
+const Stack = createStackNavigator ();
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer style={styles.containerApp}>
+      <Stack.Navigator>
+      <Stack.Screen name="Home" 
+          component={Home} 
+          initialParams={{ fromChild: 'Initial' }}/>
+          <Stack.Screen name="Login" 
+          component={Login} 
+          options={{
+            title:'Login',
+            headerStyle:{
+              backgroundColor:'#390050',
+            },
+            headerTintColor:'#fff',
+            headerTitleStyle:{
+              fontWeight: 'bold',
+            },
+          }}/>
+          <Stack.Screen name="Extra" 
+          component={Extra} />
+        </Stack.Navigator>
+      </NavigationContainer>
+
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
