@@ -1,4 +1,5 @@
 import 'react-native-gesture-handler';
+import React from 'react';
 import { Image, Text, View, TextInput, TouchableOpacity} from 'react-native';
 import styles from '../Styles';
 import { useState } from 'react';
@@ -6,8 +7,9 @@ import { Entypo } from '@expo/vector-icons';
 
 
 
-const Login = () => {
-    const [text, setText] = useState('');
+const Login = ({navigation}) => {
+    const [text, onChangeText] = React.useState('');
+    const [ textPass, setTextPass] = useState('');
     return (
         <>
             <View style={styles.top}>
@@ -18,13 +20,13 @@ const Login = () => {
             source={require('../assets/unlimited.png')} />
             <TextInput style={styles.input} 
                 placeholder="Email o Usuario"
-                onChangeText={text => setText(text)}
-                defaultValue={text}
+                onChangeText={onChangeText}
+                value={text}
                 />
                 <TextInput style={styles.input} 
                 placeholder="Contraseña"
-                onChangeText={text => setText(text)}
-                defaultValue={text}
+                onChangeText={setTextPass}
+                value={textPass}
                 />
             <View style={styles.separador}>
                 <Image style={styles.linea}

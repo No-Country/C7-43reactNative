@@ -17,6 +17,7 @@ import { StyleSheet } from "react-native";
         justifyContent: 'center',
       },
       top: {
+        height:50,
         width:'100%',   
         backgroundColor: '#390050',
         color:'white',
@@ -33,14 +34,23 @@ import { StyleSheet } from "react-native";
         width: 100, 
         height: 150,
         margin:5,
+        shadowColor: 'black',
+        shadowOffset:{
+            width: 0,
+            height: 4,
+        },
+        shadowOpacity: 0.30,
+        shadowRadius: 4.65,
     },
     input:{
+        width:150,
         margin:5,
-        flex:2,
+        height: 20,
         alignSelf: 'center',
         textAlign: 'left',
         borderBottomColor:'#6D6A6A',
         borderBottomWidth:1,
+        fontSize:15,
     },
     separador:{
         flexDirection: 'row',
