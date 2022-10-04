@@ -1,7 +1,8 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import { Image, Text, View, TextInput, TouchableOpacity} from 'react-native';
-import styles from '../Styles';
+import loginStyles from '../styles/LoginStyles';
+import buttonStyles from '../styles/ButtonStyles'
 import { useState } from 'react';
 import { Entypo } from '@expo/vector-icons';
 
@@ -12,35 +13,35 @@ const Login = ({navigation}) => {
     const [ textPass, setTextPass] = useState('');
     return (
         <>
-            <View style={styles.top}>
+            <View style={loginStyles.top}>
                 <Text>Iniciar Sesión</Text>
             </View>
-            <View style={styles.containerLogin}>
-            <Image style={styles.image}
+            <View style={loginStyles.containerLogin}>
+            <Image style={loginStyles.image}
             source={require('../assets/unlimited.png')} />
-            <TextInput style={styles.input} 
+            <TextInput style={loginStyles.input} 
                 placeholder="Email o Usuario"
                 onChangeText={onChangeText}
                 value={text}
                 />
-                <TextInput style={styles.input} 
+                <TextInput style={loginStyles.input} 
                 placeholder="Contraseña"
                 onChangeText={setTextPass}
                 value={textPass}
                 />
-            <View style={styles.separador}>
-                <Image style={styles.linea}
+            <View style={loginStyles.separador}>
+                <Image style={loginStyles.linea}
                     source={require('../assets/linea4.png')} />
                 <Entypo name="circular-graph" size={15} color="#6D6A6A" />  
-                <Image style={styles.linea}
+                <Image style={loginStyles.linea}
                 source={require('../assets/linea4.png')} /> 
             </View>
-            <View style={styles.botones} >
-            <TouchableOpacity style={styles.botonIngresar}
+            <View style={buttonStyles.containerBotones} >
+            <TouchableOpacity style={buttonStyles.botonIngresar}
                     title="Ingresar"
-                    onPress={() => navigation.navigate('Home')}><Text style={styles.textoBlanco}>Ingresar</Text>
+                    onPress={() => navigation.navigate('Profile')}><Text style={loginStyles.textoBlanco}>Ingresar</Text>
                 </TouchableOpacity>               
-                <TouchableOpacity style={styles.botonGoogle}
+                <TouchableOpacity style={buttonStyles.botonGoogle}
                     title="Google"
                     onPress={() => navigation.push('App')}><Text>Ingresar con Google</Text>
                 </TouchableOpacity>      

@@ -4,7 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './Screens/Home';
 import Login from './Screens/Login';
-import styles from './Styles';
+import styles from './styles/Styles';
+import Profile from './Screens/Profile';
+
 
 const Stack = createStackNavigator ();
 
@@ -23,12 +25,24 @@ export default function App() {
                   headerStyle: {
                     backgroundColor: '#390050',
                   },
+                  
                   headerTintColor:'white',
                   headerTitleStyle:{
                     fontWeight: 'bold',
                   },headerTitleAlign: 'center',
                 }}/>
-            </Stack.Navigator>
+                <Stack.Screen
+                  name= "Profile"
+                  component={Profile}
+                  options={{
+                    headerTransparent: true,
+                    headerTintColor:'white',
+                    headerTitleStyle:{
+                      fontWeight: 'bold',
+                    },headerTitleAlign: 'center',
+                  }}
+                  />
+                </Stack.Navigator>
           </NavigationContainer>
     
   );
