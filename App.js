@@ -13,30 +13,33 @@ const Stack = createStackNavigator ();
 
 export default function App() {
   return (
-    
     <NavigationContainer style={styles.containerApp}>
           <Stack.Navigator>
             <Stack.Screen name="Home" 
                 component={Home}                 
                 initialParams={{ fromChild: 'Initial' }}/>
                 <Stack.Screen name="Login" 
+                title="Iniciar Sesión"
                 component={Login} 
                 options={{
                   headerStyle: {
-                    backgroundColor: '#390050',
+                    backgroundColor: 'transparent',
                   },
-                  
                   headerTintColor:'white',
                   headerTitleStyle:{
-                    fontWeight: 'bold',
+                    fontWeight: 'bold', 
+                    color: 'black',
                   },headerTitleAlign: 'center',
                 }}/>
                 <Stack.Screen
                   name= "Profile"
+                  title= ""
                   component={Profile}
                   options={{
-                    headerTransparent: true,
-                    headerTintColor:'white',
+                    headerStyle: {
+                      backgroundColor: 'transparent',
+                    },
+                   
                     headerTitleStyle:{
                       fontWeight: 'bold',
                     },headerTitleAlign: 'center',

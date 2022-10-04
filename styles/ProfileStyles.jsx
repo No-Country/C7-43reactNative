@@ -1,12 +1,15 @@
 import { StyleSheet } from "react-native";
 
 const profileStyles = StyleSheet.create({
-    linearGradient: {
-        position: 'absolute',
-        left: 0,
-        right: 0,
-        top: 0,
-        height: 300,
-      }
+  container:{
+    flex:1,
+    justifyContent: 'flex-start',
+    height:'100%',
+  },
+    linearGradient: { 
+    padding:5,
+    marginTop:10,
+    height:'50%',
+    }
 });
 export default profileStyles;

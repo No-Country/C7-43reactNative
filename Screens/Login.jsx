@@ -5,6 +5,7 @@ import loginStyles from '../styles/LoginStyles';
 import buttonStyles from '../styles/ButtonStyles'
 import { useState } from 'react';
 import { Entypo } from '@expo/vector-icons';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 
@@ -13,6 +14,7 @@ const Login = ({navigation}) => {
     const [ textPass, setTextPass] = useState('');
     return (
         <>
+        <View style={loginStyles.container}>
             <View style={loginStyles.top}>
                 <Text>Iniciar Sesión</Text>
             </View>
@@ -48,6 +50,7 @@ const Login = ({navigation}) => {
             </View>
                
             </View>
+        </View>
         </>    
     );
   };

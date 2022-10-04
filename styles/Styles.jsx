@@ -7,6 +7,8 @@ import { StyleSheet } from "react-native";
         backgroundColor: 'white',
         alignItems: 'center',
         justifyContent: 'center',
+        height: '100%',
+        backgroundColor: 'white',
       }
   });
 

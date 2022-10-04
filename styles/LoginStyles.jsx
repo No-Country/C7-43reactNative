@@ -3,12 +3,16 @@ import { StyleSheet } from "react-native";
 
 
 const loginStyles = StyleSheet.create({
+    container:{
+        height: '100%',
+        backgroundColor: 'white',
+    },
     containerLogin: {
         alignItems:'center',
         backgroundColor: 'white',
         justifyContent:'space-around',
       },
-      textoBlanco:{
+        textoLogin:{
           color: 'white',
       },
         top: {
