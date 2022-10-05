@@ -7,9 +7,25 @@ const profileStyles = StyleSheet.create({
     height:'100%',
   },
     linearGradient: { 
-    padding:5,
     marginTop:10,
-    height:'50%',
+    height:'40%',
+    padding:5,
+    },
+    name:{
+    flex:3,
+    backgroundColor: 'red',
+    },
+    empleo:{
+      flex:2,
+      backgroundColor: 'yellow',
+    },
+    about:{
+      flex:2,
+      backgroundColor: 'green',
+    },
+    destacado:{
+      flex:2,
+      backgroundColor: 'blue',
     }
 });
 export default profileStyles;

@@ -1,8 +1,11 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { SafeAreaView, Text, View} from 'react-native';
+import { Image, SafeAreaView, Text, View} from 'react-native';
 import profileStyles from '../styles/ProfileStyles';
 import { LinearGradient } from 'expo-linear-gradient';
+import CardProfile from './components/CardProfile';
+
+
 
 const Profile  = ({navigation}) => {
     return(
@@ -10,12 +13,36 @@ const Profile  = ({navigation}) => {
     <SafeAreaView style={profileStyles.container}>
     <View>
         <LinearGradient  
-        colors={['#390050','rgba(57, 0, 80, 0.62)', 'transparent' ]}
+        colors={['rgba(57, 0, 80, 0.62)', 'transparent' ]}
         style={profileStyles.linearGradient}>
             <Text>
                 Profile
             </Text>
+            <View>
+                <Image 
+                source={require('../assets/profile.png')} />
+            </View>
         </LinearGradient>
+    </View>
+    <View style={profileStyles.name}>
+        <CardProfile/>
+    </View>
+    <View  style={profileStyles.empleo}>
+        <Text>Busco empleo</Text>
+        
+    </View>
+    <View style={profileStyles.about}>
+        <Text>acerca de mi</Text>
+        
+    </View>
+    <View  style={profileStyles.destacado}>
+        <Text>Destacado</Text>
+        
+    </View>
+    <View>
+
+        <Text> botonera abajo</Text>
+       
     </View>
     </SafeAreaView>
     </>
