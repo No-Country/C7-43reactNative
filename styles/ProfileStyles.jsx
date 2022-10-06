@@ -3,29 +3,28 @@ import { StyleSheet } from "react-native";
 const profileStyles = StyleSheet.create({
   container:{
     flex:1,
-    justifyContent: 'flex-start',
-    height:'100%',
   },
-    linearGradient: { 
+  linearGradient: { 
     marginTop:10,
-    height:'40%',
     padding:5,
+    flex:2,
     },
     name:{
-    flex:3,
     backgroundColor: 'red',
+    flex:1,
     },
     empleo:{
-      flex:2,
       backgroundColor: 'yellow',
+      flex:1,
     },
     about:{
-      flex:2,
       backgroundColor: 'green',
+      flex:1,
     },
     destacado:{
-      flex:2,
       backgroundColor: 'blue',
-    }
+      flex:1,
+    },
+
 });
 export default profileStyles;

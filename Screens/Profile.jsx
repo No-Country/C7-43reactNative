@@ -11,10 +11,10 @@ const Profile  = ({navigation}) => {
     return(
     <>
     <SafeAreaView style={profileStyles.container}>
-    <View>
+    <View style={profileStyles.linearGradient}>
         <LinearGradient  
         colors={['rgba(57, 0, 80, 0.62)', 'transparent' ]}
-        style={profileStyles.linearGradient}>
+        >
             <Text>
                 Profile
             </Text>
@@ -28,21 +28,16 @@ const Profile  = ({navigation}) => {
         <CardProfile/>
     </View>
     <View  style={profileStyles.empleo}>
-        <Text>Busco empleo</Text>
-        
+        <Text>Busco empleo</Text>       
     </View>
     <View style={profileStyles.about}>
-        <Text>acerca de mi</Text>
-        
+        <Text>acerca de mi</Text>       
     </View>
     <View  style={profileStyles.destacado}>
-        <Text>Destacado</Text>
-        
+        <Text>Destacado</Text>       
     </View>
     <View>
-
-        <Text> botonera abajo</Text>
-       
+        <Text> botonera abajo</Text>      
     </View>
     </SafeAreaView>
     </>

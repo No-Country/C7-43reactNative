@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 
 const loginStyles = StyleSheet.create({
     container:{
-        height: '100%',
+        flex:1,
         backgroundColor: 'white',
     },
     containerLogin: {
