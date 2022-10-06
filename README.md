@@ -70,3 +70,4 @@ NodeJS: 16.14.0
 ## Contacto
 
 cullen.maiten@gmail.com
+genesisbetaly@gmail.com
