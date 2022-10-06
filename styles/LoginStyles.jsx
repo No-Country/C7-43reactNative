@@ -8,31 +8,26 @@ const loginStyles = StyleSheet.create({
         backgroundColor: 'white',
     },
     containerLogin: {
+        flex:8,
         alignItems:'center',
-        backgroundColor: 'white',
-        justifyContent:'space-around',
-      },
-        textoLogin:{
-          color: 'white',
+        justifyContent:'space-evenly',
+
       },
         top: {
-          height:50,
+          flex:1,
           width:'100%',   
           backgroundColor: '#390050',
           color:'white',
           alignItems:'center',
       },
-      textLogin:{
-          color:'white',
-          fontWeight:500,
-          fontSize:32,
-          lineHeight:48,
-          margin:5,
+      
+      viewImage:{
+        flex:3,
       },
-      image: {
-          width: 100, 
-          height: 150,
-          margin:5,
+      image:{
+          
+          height:194,
+          width:220,
           shadowColor: 'black',
           shadowOffset:{
               width: 0,
@@ -41,27 +36,39 @@ const loginStyles = StyleSheet.create({
           shadowOpacity: 0.30,
           shadowRadius: 4.65,
       },
+      viewInput:{
+        flex:2,
+      },
       input:{
-          width:150,
-          margin:5,
-          height: 20,
+          width:250,
+          margin:15,
+          height: 30,
           alignSelf: 'center',
           textAlign: 'left',
           borderBottomColor:'#6D6A6A',
           borderBottomWidth:1,
           fontSize:15,
       },
-      separador:{
+      containerBotones:{
+        flex:3,
+        alignItems: 'center',
+    },
+      separador:{ 
           flexDirection: 'row',
-          justifyContent: 'center',
           alignItems: 'center',
           width:'100%',
+          alignSelf: 'center',
       },
       linea:{
+          width:'20%',
           height:1,
-          width:'10%',
           margin:5,
       },
+      textoLogin:{
+        color:'white',
+        fontSize:15,
+        lineHeight:15,
+    },
  });
 
  export default loginStyles;
