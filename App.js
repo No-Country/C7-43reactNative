@@ -28,7 +28,8 @@ export default function App() {
                   headerTitleStyle:{
                     fontWeight: 'bold', 
                     color: 'black',
-                  },headerTitleAlign: 'center',
+                  },
+                  headerTitleAlign: 'center',
                 }}/>
                 <Stack.Screen
                   name= "Profile"

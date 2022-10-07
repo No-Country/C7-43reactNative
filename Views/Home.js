@@ -1,13 +1,7 @@
-import React, { useState } from "react";
-import {
-  Image,
-  ImageBackground,
-  Text,
-  TextInput,
-  Button,
-  View,
-  ScrollView,
-} from "react-native";
+import 'react-native-gesture-handler';
+import React from "react";
+import { useState } from "react";
+import {Image, ImageBackground, Text, TextInput, Button, View, ScrollView,} from "react-native";
 import styles from "../Styles";
 import { Entypo } from "@expo/vector-icons";
 
