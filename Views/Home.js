@@ -59,7 +59,7 @@ const Home = ({ navigation }) => {
             />
             <Button
               style={styles.buttonFake}
-              onPress={() => navigation.navigate("Login", { name: "Login" })}
+              onPress={() => navigation.navigate("Profile", { name: "Profile" })}
               title="Unirse con google..."
               accessibilityLabel="Crear cuenta a través de tu cuenta de Google"
             />

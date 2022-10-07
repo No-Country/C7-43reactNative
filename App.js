@@ -2,18 +2,14 @@ import React from 'react'
 import 'react-native-gesture-handler'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from './Screens/Home';
+import Home from './Views/Home';
 import Login from './Screens/Login';
 import styles from './styles/Styles';
 import Profile from './Screens/Profile';
 
 
-const Stack = createStackNavigator ();
-
-
-
-
 const Stack = createStackNavigator();
+
 export default function App() {
   return (
     <NavigationContainer style={styles.containerApp}>

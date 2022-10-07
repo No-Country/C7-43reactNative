@@ -49,7 +49,7 @@ const Login = ({navigation}) => {
                     </View>              
                     <TouchableOpacity style={buttonStyles.botonGoogle}
                         title="Google"
-                        onPress={() => navigation.push('App')}><Text>Ingresar con Google</Text>
+                        onPress={() => navigation.push('Home')}><Text>Ingresar con Google</Text>
                     </TouchableOpacity>      
                 </View>
             </View>
