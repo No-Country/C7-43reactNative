@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     height: "100vh",
-    width:360,
+    width: 360,
     flexDirection: "row",
     alignItems: "center",
   },
@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
     color: "#00B2FF",
     fontSize: 20,
   },
- 
 });
 
 export default styles;
