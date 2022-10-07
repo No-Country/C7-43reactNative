@@ -27,17 +27,17 @@ const getAllUsers = catchAsync(async (req, res, next) => {
 });
 
 const createUser = catchAsync(async (req, res, next) => {
-  const { name, email, password } = req.body;
+  const { nombre, apellido, email, password } = req.body;
 
   // Encrypt the password
   const salt = await bcrypt.genSalt(12);
   const hashedPassword = await bcrypt.hash(password, salt);
 
   const newUser = await User.create({
-    name,
+    nombre,
+    apellido,
     email,
     password: hashedPassword,
-    role,
   });
 
   // Remove password from response
