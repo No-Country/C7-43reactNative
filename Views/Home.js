@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import styles from "../Styles";
 import { Entypo } from "@expo/vector-icons";
-import { SafeAreaView } from "react-native-web";
+
 
 const Home = ({ navigation }) => {
   const [input, setInput] = useState("");
