@@ -1,6 +1,18 @@
 // Models
-const { User } = require('./user.model');
+const { User } = require("./user.model");
+const { Empresa } = require("./empresa.model");
+const { Oferta } = require("./oferta.model");
+const { Aplicacion } = require("./aplicacion_a_ofertas.model");
 
-const initModels = () => {};
+const initModels = () => {
+  User.hasMany(Aplicacion, { foreignKey: "idUsuario" });
+  Aplicacion.belongsTo(User);
+
+  Empresa.hasMany(Oferta, { foreignKey: "idEmpresa" });
+  Oferta.belongsTo(Empresa);
+
+  Oferta.hasMany(Aplicacion, { foreignKey: "idOferta" });
+  Aplicacion.belongsTo(Oferta);
+};
 
 module.exports = { initModels };
