@@ -15,15 +15,15 @@ const profileStyles = StyleSheet.create({
     },
     empleo:{
       backgroundColor: 'yellow',
-      flex:1,
+      height:200,
     },
     about:{
       backgroundColor: 'green',
-      flex:1,
+      height:300,
     },
     destacado:{
       backgroundColor: 'blue',
-      flex:1,
+      height:300,
     },
 
 });

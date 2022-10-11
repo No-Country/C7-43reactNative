@@ -1,14 +1,83 @@
 import { StyleSheet } from "react-native";
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  logo: {
+    height: 154,
+    width: 200,
+    flexDirection: "row",
+    alignSelf: "center",
+  },
+  titulo: {
+    color: "#FFFFFF",
+    backgroundColor: "none",
+    position: "relative",
+    flexDirection: "row",
+    alignSelf: "center",
+    fontSize: 50,
+    textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+  },
+  input: {
+    alignSelf: "center",
+    height: 40,
+    margin: 12,
+    width: 200,
+    borderWidth: 2,
+    padding: 15,
+    borderRadius: 15,
+    position: "relative",
+    borderColor: "#FAFAFA",
+    backgroundColor: "#FFFFFF",
+    color: "#6D6A6A",
+  },
+  button: {
+    height: 20,
+    width: 60,
+    margin: 0,
+    padding: 15,
+    borderWidth: 2,
+    border: "solid",
+    borderRadius: 20,
+    color: "#7B61FF",
+    position: "absolute",
+  },
+  buttonFake: {
+    height: 40,
+    width: 200,
+    margin: 20,
+    borderWidth: 2,
+    border: "solid",
+    borderRadius: 20,
+    color: "#FFFFFF",
+  },
+  redireccionar: {
+    flexDirection: "row",
+  },
+  textoInferior: {
+    color: "#FFFFFF",
+    backgroundColor: "none",
+    position: "relative",
+    fontSize: 20,
+    textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+  },
+  fixToText: {
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  content: {
+    backgroundColor: "none",
+    position: "relative",
+    color: "#00B2FF",
+    fontSize: 20,
+  },
+});
 
-  const styles = StyleSheet.create({
-    containerApp: {
-        flex: 1,
-        backgroundColor: 'white',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'white',
-      }
-  });
-
-  export default styles;
+export default styles;
