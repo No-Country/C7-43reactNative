@@ -20,3 +20,5 @@ ofertaRouter.post("/", createOfertas);
 ofertaRouter.patch("/:id", updateOfertas);
 
 ofertaRouter.delete("/:id", deleteOfertas);
+
+module.exports = { ofertaRouter };

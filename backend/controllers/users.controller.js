@@ -51,10 +51,10 @@ const createUser = catchAsync(async (req, res, next) => {
 });
 
 const updateUser = catchAsync(async (req, res, next) => {
-  const { nombre, apellido, email, password } = req.body;
+  const { nombre, apellido, email, password, role } = req.body;
   const { user } = req;
 
-  await user.update({ nombre, apellido, email, password });
+  await user.update({ nombre, apellido, email, password, role });
 
   res.status(200).json({
     status: "success",
