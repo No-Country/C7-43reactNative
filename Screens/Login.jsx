@@ -1,17 +1,23 @@
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Image, Text, View, TextInput, TouchableOpacity} from 'react-native';
 import loginStyles from '../styles/LoginStyles';
 import buttonStyles from '../styles/ButtonStyles'
 import { useState } from 'react';
 import { Entypo } from '@expo/vector-icons';
-import { ScrollView } from 'react-native-gesture-handler';
+import { getUser } from '../utilities/services';
+
 
 
 
 const Login = ({navigation}) => {
     const [text, onChangeText] = React.useState('');
     const [ textPass, setTextPass] = useState('');
+    const onLoginClick = async () => {
+        await getUser()
+        .then(()=> navigation.navigate('Profile'))
+    }
+
     return (
         <>
         <View style={loginStyles.container}>
@@ -38,8 +44,10 @@ const Login = ({navigation}) => {
                 <View style={loginStyles.containerBotones} >
                 <TouchableOpacity style={buttonStyles.botonIngresar}
                         title="Ingresar"
-                        onPress={() => navigation.navigate('Profile')}><Text style={loginStyles.textoLogin}>Ingresar</Text>
+                        onPress={()=>(onLoginClick())}>
+                        <Text style={loginStyles.textoLogin}>Ingresar</Text>
                     </TouchableOpacity> 
+                   
                     <View style={loginStyles.separador}>
                         <Image style={loginStyles.linea}
                             source={require('../assets/linea4.png')} />

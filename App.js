@@ -2,17 +2,17 @@ import React from 'react'
 import 'react-native-gesture-handler'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from './Views/Home';
+import Home from './Screens/Home';
 import Login from './Screens/Login';
-import styles from './styles/Styles';
 import Profile from './Screens/Profile';
+import stylesApp from './styles/StyleApp';
 
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer style={styles.containerApp}>
+    <NavigationContainer style={stylesApp.containerApp}>
           <Stack.Navigator>
             <Stack.Screen name="Home" 
                 component={Home}                 
@@ -28,7 +28,8 @@ export default function App() {
                   headerTitleStyle:{
                     fontWeight: 'bold', 
                     color: 'black',
-                  },headerTitleAlign: 'center',
+                  },
+                  headerTitleAlign: 'center',
                 }}/>
                 <Stack.Screen
                   name= "Profile"
@@ -45,6 +46,7 @@ export default function App() {
                   }}
                   />
                 </Stack.Navigator>
-          </NavigationContainer> 
+    </NavigationContainer> 
   );
 }
+
