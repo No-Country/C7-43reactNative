@@ -1,22 +1,22 @@
 import 'react-native-gesture-handler';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Image, Text, View, TextInput, TouchableOpacity} from 'react-native';
 import loginStyles from '../styles/LoginStyles';
 import buttonStyles from '../styles/ButtonStyles'
 import { useState } from 'react';
 import { Entypo } from '@expo/vector-icons';
-import { getUser } from '../utilities/services';
 
 
 
 
 const Login = ({navigation}) => {
+
     const [text, onChangeText] = React.useState('');
     const [ textPass, setTextPass] = useState('');
-    const onLoginClick = async () => {
-        await getUser()
-        .then(()=> navigation.navigate('Profile'))
-    }
+    // const onLoginClick = async () => {
+    //     await getUser()
+    //     .then(()=> navigation.navigate('Profile'))
+    // }
 
     return (
         <>
@@ -44,7 +44,7 @@ const Login = ({navigation}) => {
                 <View style={loginStyles.containerBotones} >
                 <TouchableOpacity style={buttonStyles.botonIngresar}
                         title="Ingresar"
-                        onPress={()=>(onLoginClick())}>
+                        onPress={()=>navigation.navigate('Profile')}>
                         <Text style={loginStyles.textoLogin}>Ingresar</Text>
                     </TouchableOpacity> 
                    
@@ -56,8 +56,8 @@ const Login = ({navigation}) => {
                         source={require('../assets/linea4.png')} /> 
                     </View>              
                     <TouchableOpacity style={buttonStyles.botonGoogle}
-                        title="Google"
-                        onPress={() => navigation.push('Home')}><Text>Ingresar con Google</Text>
+                        title="Ofertas Trabajo"
+                        onPress={() => navigation.navigate('Feed')}><Text>Ofertas trabajo </Text>
                     </TouchableOpacity>      
                 </View>
             </View>
