@@ -8,6 +8,7 @@ const {
 } = require("../controllers/ofertas.controller");
 
 const { protectSession } = require("../middlewares/auth.middlewares");
+const { ofertaExists } = require("../middlewares/ofertas.middlewares");
 
 const ofertaRouter = express.Router();
 
@@ -17,8 +18,8 @@ ofertaRouter.get("/", getOfertas);
 
 ofertaRouter.post("/", createOfertas);
 
-ofertaRouter.patch("/:id", updateOfertas);
+ofertaRouter.patch("/:id", ofertaExists, updateOfertas);
 
-ofertaRouter.delete("/:id", deleteOfertas);
+ofertaRouter.delete("/:id", ofertaExists, deleteOfertas);
 
 module.exports = { ofertaRouter };

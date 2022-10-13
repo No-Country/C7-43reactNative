@@ -3,6 +3,8 @@ const express = require("express");
 // Routers
 const { usersRouter } = require("./routes/users.routes");
 const { empresaRouter } = require("./routes/empresas.routes");
+const { ofertaRouter } = require("./routes/ofertas.routes");
+const { aplicacionRouter } = require("./routes/aplicacion_a_ofertas.routes");
 
 // Controllers
 const { globalErrorHandler } = require("./controllers/error.controller");
@@ -16,6 +18,8 @@ app.use(express.json());
 // Define endpoints
 app.use("/api/v1/users", usersRouter);
 app.use("/api/v1/empresas", empresaRouter);
+app.use("/api/v1/ofertas", ofertaRouter);
+app.use("/api/v1/aplicacion", aplicacionRouter);
 
 // Global error handler
 app.use(globalErrorHandler);
