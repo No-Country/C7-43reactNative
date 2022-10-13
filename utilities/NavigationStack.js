@@ -3,8 +3,8 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../Screens/Home';
 import Login from '../Screens/Login';
-import { BottomTab } from './BottomTab';
 import Profile from '../Screens/Profile';
+import Feed from '../Screens/Feed';
 
 
 const Stack = createStackNavigator();
@@ -28,19 +28,30 @@ export default function NavigationStack(){
             fontWeight: 'bold', 
             color: 'black',
             },
-            headerTitleAlign: 'center',
+             headerTitleAlign: 'center',
             // headerShown:false,
         }}/>
         <Stack.Screen
             name= "Profile"
             title= ""
-            component={BottomTab}
+            component={Profile}
             options={{
             headerStyle: {
                 backgroundColor: 'transparent',
-                headerShown:false,
             },
-            
+            headerTitleStyle:{
+                fontWeight: 'bold',
+            },headerTitleAlign: 'center',
+            }}
+            />
+            <Stack.Screen
+            name= "Feed"
+            title= ""
+            component={Feed}
+            options={{
+            headerStyle: {
+                backgroundColor: 'transparent',
+            },
             headerTitleStyle:{
                 fontWeight: 'bold',
             },headerTitleAlign: 'center',

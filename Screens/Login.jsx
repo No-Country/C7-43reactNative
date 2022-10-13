@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Image, Text, View, TextInput, TouchableOpacity} from 'react-native';
 import loginStyles from '../styles/LoginStyles';
 import buttonStyles from '../styles/ButtonStyles'
@@ -9,8 +9,8 @@ import { Entypo } from '@expo/vector-icons';
 
 
 
-
 const Login = ({navigation}) => {
+
     const [text, onChangeText] = React.useState('');
     const [ textPass, setTextPass] = useState('');
     // const onLoginClick = async () => {
@@ -56,8 +56,8 @@ const Login = ({navigation}) => {
                         source={require('../assets/linea4.png')} /> 
                     </View>              
                     <TouchableOpacity style={buttonStyles.botonGoogle}
-                        title="Google"
-                        onPress={() => navigation.push('Home')}><Text>Ingresar con Google</Text>
+                        title="Ofertas Trabajo"
+                        onPress={() => navigation.navigate('Feed')}><Text>Ofertas trabajo </Text>
                     </TouchableOpacity>      
                 </View>
             </View>

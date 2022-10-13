@@ -5,6 +5,7 @@ const stylesCard = StyleSheet.create({
     profile:{
         height:200,
         backgroundColor: 'transparent',
+        borderRadius:4,
         margin:10,
         padding:5,
     },

@@ -4,6 +4,10 @@ import { Image, SafeAreaView, Text, View} from 'react-native';
 import { Card, Paragraph, Title } from 'react-native-paper';
 import stylesCard from '../../styles/StylesCard';
 
+
+
+
+
 const CardProfile = () => {
 
         return(
@@ -14,8 +18,8 @@ const CardProfile = () => {
                     <Card.Content>
                     <Image 
                     source={require('../../assets/profile.png')} />
-                        <Title>Nombre</Title>
-                        <Paragraph>Profesion</Paragraph>
+                       <Title>Nombre</Title>
+                       <Paragraph>Profesion</Paragraph>
                         <Paragraph>Provincia</Paragraph>
                     </Card.Content>
                     </Card>

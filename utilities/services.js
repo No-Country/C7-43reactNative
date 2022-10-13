@@ -1,5 +1,7 @@
 
 
+
+
 export const getUser = () => {
 
     return new Promise((resolve, reject) => ( fetch('http://localhost:4000/api/v1/users',{
@@ -17,4 +19,8 @@ export const getUser = () => {
     ))
 }
 
- 
+
+// let clientWidth = document.getElementById('containerProfile').clientWidth;
+// let clientHeight = document.getElementById('containerProfile').clientHeight;
+// console.log(clientWidth, "largo", clientHeight, "ancho")
+

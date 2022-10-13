@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import { SafeAreaView, Text, View} from 'react-native';
-import { Card } from 'react-native-paper';
+import { Card, Paragraph } from 'react-native-paper';
 import stylesCard from '../../styles/StylesCard';
 
 
@@ -12,7 +12,7 @@ const GreyCard = () => {
             <View>
                 <Card title= " nombre"
                     style={stylesCard.grey}>
-               <Text> textos que renderizan</Text>
+              <Paragraph>Textos que renderizan</Paragraph>
                 </Card>
             </View>
         </SafeAreaView>
