@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { View, CheckBox } from "react-native";
-import { ScrollView, TextInput } from "react-native-gesture-handler";
+import { ScrollView, TextInput,TouchableOpacity } from "react-native-gesture-handler";
 import { Button, Text } from "react-native-paper";
 import buttonStyles from "./styles/ButtonStyles";
 import createAccountStyles from "./styles/createAccountStyles";
 import styles from "./styles/Styles";
+import loginStyles from "./styles/LoginStyles";
 const CrearCuenta = ({ navigation }) => {
   const [input, setInput] = useState("");
   const [isSelected, setSelection] = useState(false);
@@ -84,22 +85,29 @@ const CrearCuenta = ({ navigation }) => {
             />
             <Text style={styles.label}>Soy estudiante</Text>
           </View>
-          <Text>¿Estás buscando empleo?</Text>
+          <Text style={styles.label}>¿Estás buscando empleo?</Text>
           <View style={createAccountStyles.inputCreateNacimientoArea}>
             <CheckBox style={createAccountStyles.checkbox} />
             <Text style={styles.label}>Sí</Text>
           </View>
           <View style={createAccountStyles.inputCreateNacimientoArea}>
-            <CheckBox style={createAccountStyles.checkbox} />
+            <CheckBox
+              style={createAccountStyles.checkbox}
+              
+              onValueChange={() => {}}
+              
+            />{" "}
+            
             <Text style={styles.label}>Por ahora no</Text>
           </View>
-          
-            <Button
-              style={styles.botonIngresar}
-              title="Registrarse"
-              onPress={() => navigation.navigate("Login", { name: "Login" })}
-              accessibilityLabel="Login"
-            />
+          <View style={loginStyles.containerBotones} >
+          <TouchableOpacity
+          style={buttonStyles.botonIngresar}
+          title="Registrarse"
+          onPress={() => navigation.navigate("Login", { name: "Login" })}
+          accessibilityLabel="Login"
+          ><Text>Registrarse</Text></TouchableOpacity>
+          </View>
           {isSelected ? (
             <>
               <Text>Universidad o centro de estudios</Text>
@@ -140,9 +148,7 @@ const CrearCuenta = ({ navigation }) => {
             </>
           ) : (
             <> </>
-            )}
-
-          
+          )}
         </ScrollView>
       </View>
     </>
