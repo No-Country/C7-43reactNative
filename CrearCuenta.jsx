@@ -93,15 +93,13 @@ const CrearCuenta = ({ navigation }) => {
             <CheckBox style={createAccountStyles.checkbox} />
             <Text style={styles.label}>Por ahora no</Text>
           </View>
-
-          <View style={styles.fixToText}>
+          
             <Button
-              style={styles.button}
+              style={styles.botonIngresar}
               title="Registrarse"
               onPress={() => navigation.navigate("Login", { name: "Login" })}
               accessibilityLabel="Login"
             />
-          </View>
           {isSelected ? (
             <>
               <Text>Universidad o centro de estudios</Text>
@@ -142,7 +140,9 @@ const CrearCuenta = ({ navigation }) => {
             </>
           ) : (
             <> </>
-          )}
+            )}
+
+          
         </ScrollView>
       </View>
     </>
