@@ -7,14 +7,17 @@ const {
   updateOfertas,
 } = require("../controllers/ofertas.controller");
 
-const { protectSession } = require("../middlewares/auth.middlewares");
+const {
+  protectSession,
+  protectUsersAccount,
+} = require("../middlewares/auth.middlewares");
 const { ofertaExists } = require("../middlewares/ofertas.middlewares");
 
 const ofertaRouter = express.Router();
 
 ofertaRouter.use(protectSession);
 
-ofertaRouter.get("/", getOfertas);
+ofertaRouter.get("/", protectUsersAccount, getOfertas);
 
 ofertaRouter.post("/", createOfertas);
 

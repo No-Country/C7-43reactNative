@@ -54,10 +54,20 @@ const updateUser = catchAsync(async (req, res, next) => {
   const { nombre, apellido, email, password, role } = req.body;
   const { user } = req;
 
-  await user.update({ nombre, apellido, email, password, role });
+  // Encrypt the password
+  const salt = await bcrypt.genSalt(12);
+  const hashedPassword = await bcrypt.hash(password, salt);
+
+  await user.update({
+    nombre,
+    apellido,
+    email,
+    password: hashedPassword,
+    role,
+  });
 
   res.status(200).json({
-    status: "success",
+    status: "Updated",
     data: { user },
   });
 });

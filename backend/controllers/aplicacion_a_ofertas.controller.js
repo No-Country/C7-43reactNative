@@ -4,10 +4,10 @@ const { AppError } = require("../utils/appError.util");
 const { catchAsync } = require("../utils/catchAsync.util");
 
 const getAplicaciones = catchAsync(async (req, res, next) => {
-  const { user } = req;
+  const { sessionUser } = req;
 
   const aplicaciones = await Aplicacion.findAll({
-    where: { status: "active", idUsuario: user.id },
+    where: { status: "active", idUsuario: sessionUser.id },
   });
   res.status(200).json({
     status: "success",
@@ -16,12 +16,11 @@ const getAplicaciones = catchAsync(async (req, res, next) => {
 });
 
 const createAplicacion = catchAsync(async (req, res, next) => {
-  const { user, oferta } = req;
-  const { fecha_de_aplicacion } = req.body;
+  const { idUsuario, idOferta, fecha_de_aplicacion } = req.body;
 
   const newAplicacion = await Aplicacion.create({
-    idUsuario: user.id,
-    idOferta: oferta.id,
+    idUsuario,
+    idOferta,
     fecha_de_aplicacion,
   });
   res.status(201).json({
