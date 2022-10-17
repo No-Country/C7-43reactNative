@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    height: "100vh",
+    height: 740,
     width:360,
     flexDirection: "row",
     alignItems: "center",

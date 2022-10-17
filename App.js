@@ -6,6 +6,7 @@ import Home from './Views/Home';
 import Login from './Screens/Login';
 import styles from './styles/Styles';
 import Profile from './Screens/Profile';
+import CrearCuenta from './CrearCuenta';
 
 
 const Stack = createStackNavigator();
@@ -34,6 +35,20 @@ export default function App() {
                   name= "Profile"
                   title= ""
                   component={Profile}
+                  options={{
+                    headerStyle: {
+                      backgroundColor: 'transparent',
+                    },
+                   
+                    headerTitleStyle:{
+                      fontWeight: 'bold',
+                    },headerTitleAlign: 'center',
+                  }}
+                  />
+                <Stack.Screen
+                  name= "CrearCuenta"
+                  title= ""
+                  component={CrearCuenta}
                   options={{
                     headerStyle: {
                       backgroundColor: 'transparent',
