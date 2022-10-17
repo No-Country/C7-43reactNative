@@ -25,11 +25,10 @@ const usersRouter = express.Router();
 usersRouter.post("/", createUser);
 
 usersRouter.post("/login", login);
+usersRouter.get("/", getAllUsers);
 
 // Protecting below endpoints
 usersRouter.use(protectSession);
-
-usersRouter.get("/", getAllUsers);
 
 usersRouter.patch("/:id", userExists, protectUsersAccount, updateUser);
 
