@@ -9,19 +9,16 @@ import { useWindowDimensions } from 'react-native';
 
 
 
-
 export default function App() {
-  //useEffect(()=> {
+
     const contextApp = createContext();
-    // const windowWidth =;
-    // const windowHeight = ;
     contextApp.setWidth =  useWindowDimensions().width
     contextApp.setHeight = useWindowDimensions().height
- //})
+ 
 
   return (
     <NavigationContainer style={stylesApp.containerApp}>
-      {useContext.width}
+      {contextApp.width}
           <NavigationStack/>
     </NavigationContainer> 
   );

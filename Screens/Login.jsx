@@ -1,28 +1,31 @@
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Image, Text, View, TextInput, TouchableOpacity} from 'react-native';
 import loginStyles from '../styles/LoginStyles';
 import buttonStyles from '../styles/ButtonStyles'
 import { useState } from 'react';
 import { Entypo } from '@expo/vector-icons';
+import { getUser } from '../utilities/services';
+import axios from 'axios';
 
 
 
 
 const Login = ({navigation}) => {
 
+    
     const [text, onChangeText] = React.useState('');
     const [ textPass, setTextPass] = useState('');
-    // const onLoginClick = async () => {
-    //     await getUser()
-    //     .then(()=> navigation.navigate('Profile'))
-    // }
+
+       const onLoginClick = async () => {
+        await getUser()
+        .then(()=> navigation.navigate('Profile'))
+    }
 
     return (
         <>
         <View style={loginStyles.container}>
             <View style={loginStyles.top}>
-                <Text>Iniciar Sesión</Text>
             </View>
             <View style={loginStyles.containerLogin}>
                 <View  style={loginStyles.viewImage}>
@@ -44,7 +47,7 @@ const Login = ({navigation}) => {
                 <View style={loginStyles.containerBotones} >
                 <TouchableOpacity style={buttonStyles.botonIngresar}
                         title="Ingresar"
-                        onPress={()=>navigation.navigate('Profile')}>
+                        onPress={()=>onLoginClick()}>
                         <Text style={loginStyles.textoLogin}>Ingresar</Text>
                     </TouchableOpacity> 
                    

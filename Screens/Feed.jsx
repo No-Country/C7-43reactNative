@@ -5,6 +5,8 @@ import CardJob from './components/CardJob';
 
 
 const Feed  = ({navigation}) => {
+
+
     return (
         <>
     <SafeAreaView>
