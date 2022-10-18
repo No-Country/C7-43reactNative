@@ -25,7 +25,6 @@ const loginStyles = StyleSheet.create({
         flex:3,
       },
       image:{
-          
           height:194,
           width:220,
           shadowColor: 'black',
