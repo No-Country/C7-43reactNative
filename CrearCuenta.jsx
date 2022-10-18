@@ -6,6 +6,7 @@ import buttonStyles from "./styles/ButtonStyles";
 import createAccountStyles from "./styles/createAccountStyles";
 import styles from "./styles/Styles";
 import loginStyles from "./styles/LoginStyles";
+
 const CrearCuenta = ({ navigation }) => {
   const [input, setInput] = useState("");
   const [isSelected, setSelection] = useState(false);
