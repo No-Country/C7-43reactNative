@@ -13,7 +13,7 @@ import loginStyles from "./styles/LoginStyles";
 import { postUser } from "./utilities/services";
 
 const CrearCuenta = ({ navigation }) => {
-  const [usuarioData, setUsuarioData] = useState([]);
+  const [usuario, setUsuario] = useState([]);
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [diaNacimiento, setDiaNacimiento] = useState("");
@@ -38,7 +38,8 @@ const CrearCuenta = ({ navigation }) => {
       });
     });
   }, [usuario]);
-  const usuarioInfo = {
+
+  const usuarioData = {
   nombre: { nombre },
   apellido: { apellido },
   diaNacimiento: { diaNacimiento },
@@ -57,15 +58,6 @@ const CrearCuenta = ({ navigation }) => {
   buscaEmpleo: { buscaEmpleo },
   
 }
-  const postUser = () => {
-    return fetch("http://localhost:4000/api/v1/users", {
-      metohd: "POST",
-      mode: "no-cors",
-      headers: {},
-      body: JSON.stringify(usuarioInfo),
-    });
-  };
-
   return (
     <>
       <View style={styles.containerApp}>
