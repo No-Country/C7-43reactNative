@@ -7,7 +7,7 @@ import {
 } from "react-native-gesture-handler";
 import { Text } from "react-native-paper";
 import buttonStyles from "./styles/ButtonStyles";
-import createAccountStyles from "./styles/createAccountStyles";
+import createAccountStyles from "./styles/CreateAccountStyles";
 import styles from "./styles/Styles";
 import loginStyles from "./styles/LoginStyles";
 import { postUser } from "./utilities/services";

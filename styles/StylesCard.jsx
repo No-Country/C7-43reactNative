@@ -3,17 +3,19 @@ import { StyleSheet } from "react-native";
 
 const stylesCard = StyleSheet.create({
     profile:{
-        height:200,
+        flex:1,
+        height:250,
         backgroundColor: 'transparent',
         borderRadius:4,
-        margin:10,
-        padding:5,
+        justifyContent: 'center'
     },
     grey:{
-        height:200,
+        flex:6,
+        height:150,
         backgroundColor:'#EBEBEB',
         borderRadius:4,
-        margin:10,
+        margin:15,
+        justifyContent: 'center'
     }
 });
 
