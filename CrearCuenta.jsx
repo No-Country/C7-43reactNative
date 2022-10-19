@@ -1,15 +1,71 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, CheckBox } from "react-native";
-import { ScrollView, TextInput,TouchableOpacity } from "react-native-gesture-handler";
-import { Button, Text } from "react-native-paper";
+import {
+  ScrollView,
+  TextInput,
+  TouchableOpacity,
+} from "react-native-gesture-handler";
+import { Text } from "react-native-paper";
 import buttonStyles from "./styles/ButtonStyles";
 import createAccountStyles from "./styles/createAccountStyles";
 import styles from "./styles/Styles";
 import loginStyles from "./styles/LoginStyles";
+import { postUser } from "./utilities/services";
 
 const CrearCuenta = ({ navigation }) => {
-  const [input, setInput] = useState("");
+  const [usuarioData, setUsuarioData] = useState([]);
+  const [nombre, setNombre] = useState("");
+  const [apellido, setApellido] = useState("");
+  const [diaNacimiento, setDiaNacimiento] = useState("");
+  const [mesNacimiento, setMesNacimiento] = useState("");
+  const [anioNacimiento, setAnioNacimiento] = useState("");
+  const [pais, setPais] = useState("");
+  const [codigoPostal, setCodigoPostal] = useState("");
+  const [ciudad, setCiudad] = useState("");
+  const [cargoReciente, setCargoReciente] = useState("");
+  const [universidad, setUniversidad] = useState("");
+  const [titulo, setTitulo] = useState("");
+  const [especializacion, setEspecializacion] = useState("");
+  const [anioInicio, setAnioInicio] = useState("");
+  const [anioFinalizacion, setAnioFinalizacion] = useState("");
+  const [buscaEmpleo, setBuscaEmpleo] = useState(false);
   const [isSelected, setSelection] = useState(false);
+
+  useEffect(() => {
+    postUser().then((resp) => {
+      resp.data.usuarios.map((usuario) => {
+        setUsuarioData((usuarioData) => [...usuarioData, { ...usuario }]);
+      });
+    });
+  }, [usuario]);
+  const usuarioInfo = {
+  nombre: { nombre },
+  apellido: { apellido },
+  diaNacimiento: { diaNacimiento },
+  mesNacimiento: { mesNacimiento },
+  anioNacimiento: { anioNacimiento },
+  pais: { pais },
+  codigoPostal: { codigoPostal },
+  ciudad: { ciudad },
+  cargoReciente: { cargoReciente },
+  esEstudiante: { isSelected },
+  universidad: { universidad },
+  titulo: { titulo },
+  especializacion: { especializacion },
+  anioInicio: { anioInicio },
+  anioFinalizacion: { anioFinalizacion },
+  buscaEmpleo: { buscaEmpleo },
+  
+}
+  const postUser = () => {
+    return fetch("http://localhost:4000/api/v1/users", {
+      metohd: "POST",
+      mode: "no-cors",
+      headers: {},
+      body: JSON.stringify(usuarioInfo),
+    });
+  };
+
   return (
     <>
       <View style={styles.containerApp}>
@@ -17,15 +73,15 @@ const CrearCuenta = ({ navigation }) => {
           <Text>Nombre</Text>
           <TextInput
             style={createAccountStyles.inputCreate}
-            onChangeText={(input) => setInput(input)}
+            onChangeText={(nombre) => setNombre(nombre)}
             placeholder=""
             name="nombre"
-            defaultValue={input}
+            defaultValue={nombre}
           />
           <Text>Apellido</Text>
           <TextInput
             style={createAccountStyles.inputCreate}
-            onChangeText={(input) => setInput(input)}
+            onChangeText={(apellido) => setApellido(apellido)}
             placeholder=""
             name="apellido"
           />
@@ -33,19 +89,21 @@ const CrearCuenta = ({ navigation }) => {
           <View style={createAccountStyles.inputCreateNacimientoArea}>
             <TextInput
               style={createAccountStyles.inputCreateNacimiento}
-              onChangeText={(input) => setInput(input)}
+              onChangeText={(diaNacimiento) => setDiaNacimiento(diaNacimiento)}
               placeholder="Dia"
               name="dia"
             />
             <TextInput
               style={createAccountStyles.inputCreateNacimiento}
-              onChangeText={(input) => setInput(input)}
+              onChangeText={(mesNacimiento) => setMesNacimiento(mesNacimiento)}
               placeholder="Mes"
               name="mes"
             />
             <TextInput
               style={createAccountStyles.inputCreateNacimiento}
-              onChangeText={(input) => setInput(input)}
+              onChangeText={(anioNacimiento) =>
+                setAnioNacimiento(anioNacimiento)
+              }
               placeholder="Año"
               name="año"
             />
@@ -53,28 +111,28 @@ const CrearCuenta = ({ navigation }) => {
           <Text>Pais/Región</Text>
           <TextInput
             style={createAccountStyles.inputCreate}
-            onChangeText={(input) => setInput(input)}
+            onChangeText={(pais) => setPais(pais)}
             placeholder=""
             name="pais/region"
           />
           <Text>Código Postal</Text>
           <TextInput
             style={createAccountStyles.inputCreate}
-            onChangeText={(input) => setInput(input)}
+            onChangeText={(codigoPostal) => setCodigoPostal(codigoPostal)}
             placeholder=""
             name="codigo postal"
           />
           <Text>Ciudad</Text>
           <TextInput
             style={createAccountStyles.inputCreate}
-            onChangeText={(input) => setInput(input)}
+            onChangeText={(ciudad) => setCiudad(ciudad)}
             placeholder=""
             name="ciudad"
           />
           <Text>Cargo más reciente</Text>
           <TextInput
             style={createAccountStyles.inputCreate}
-            onChangeText={(input) => setInput(input)}
+            onChangeText={(cargoReciente) => setCargoReciente(cargoReciente)}
             placeholder=""
             name="cargo mas reciente"
           />
@@ -88,64 +146,86 @@ const CrearCuenta = ({ navigation }) => {
           </View>
           <Text style={styles.label}>¿Estás buscando empleo?</Text>
           <View style={createAccountStyles.inputCreateNacimientoArea}>
-            <CheckBox style={createAccountStyles.checkbox} />
+            <CheckBox
+              value={buscaEmpleo}
+              onValueChange={setBuscaEmpleo}
+              style={createAccountStyles.checkbox}
+            />
             <Text style={styles.label}>Sí</Text>
           </View>
-          <View style={createAccountStyles.inputCreateNacimientoArea}>
-            <CheckBox
-              style={createAccountStyles.checkbox}
-              
-              onValueChange={() => {}}
-              
-            />{" "}
-            
-            <Text style={styles.label}>Por ahora no</Text>
-          </View>
-          <View style={loginStyles.containerBotones} >
-          <TouchableOpacity
-          style={buttonStyles.botonIngresar}
-          title="Registrarse"
-          onPress={() => navigation.navigate("Login", { name: "Login" })}
-          accessibilityLabel="Login"
-          ><Text>Registrarse</Text></TouchableOpacity>
-          </View>
+          {!isSelected ? (
+            <View style={loginStyles.containerBotones}>
+              <TouchableOpacity
+                style={buttonStyles.botonIngresar}
+                title="Registrarse"
+                onPress={
+                  () => navigation.navigate("Login", { name: "Login" })
+                  //Agregar también la función que guarde/reciba/envie los datos del input a la base de datos
+                }
+                accessibilityLabel="Login"
+              >
+                <Text>Registrarse</Text>
+              </TouchableOpacity>
+            </View>
+          ) : (
+            <></>
+          )}
           {isSelected ? (
             <>
               <Text>Universidad o centro de estudios</Text>
               <TextInput
                 style={createAccountStyles.inputCreate}
-                onChangeText={(input) => setInput(input)}
+                onChangeText={(universidad) => setUniversidad(universidad)}
                 placeholder=""
                 name="universidad"
               />
               <Text>Titulo</Text>
               <TextInput
                 style={createAccountStyles.inputCreate}
-                onChangeText={(input) => setInput(input)}
+                onChangeText={(titulo) => setTitulo(titulo)}
                 placeholder=""
                 name="titulo"
               />
               <Text>Especialización</Text>
               <TextInput
                 style={createAccountStyles.inputCreate}
-                onChangeText={(input) => setInput(input)}
+                onChangeText={(especializacion) =>
+                  setEspecializacion(especializacion)
+                }
                 placeholder=""
                 name="especializacion"
               />
               <Text>Año de inicio</Text>
               <TextInput
                 style={createAccountStyles.inputCreate}
-                onChangeText={(input) => setInput(input)}
+                onChangeText={(anioInicio) => setAnioInicio(anioInicio)}
                 placeholder=""
                 name="año de inicio"
               />
               <Text>Año de finalización</Text>
               <TextInput
                 style={createAccountStyles.inputCreate}
-                onChangeText={(input) => setInput(input)}
+                onChangeText={(anioFinalizacion) =>
+                  setAnioFinalizacion(anioFinalizacion)
+                }
                 placeholder=""
                 name="año de finalizacion"
               />
+              <View style={loginStyles.containerBotones}>
+                <TouchableOpacity
+                  style={buttonStyles.botonIngresar}
+                  title="Registrarse"
+                  onPress={() => {
+                    getUser.data.post({ nombre }).then(({ data }) => {
+                      setPosts((_posts) => [..._posts, data]);
+                    });
+                    // navigation.navigate("Login", { name: "Login" })
+                  }}
+                  accessibilityLabel="Login"
+                >
+                  <Text>Registrarse</Text>
+                </TouchableOpacity>
+              </View>
             </>
           ) : (
             <> </>
