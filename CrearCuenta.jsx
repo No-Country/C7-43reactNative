@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { View, CheckBox } from "react-native";
+import { View } from "react-native";
 import {
   ScrollView,
   TextInput,
   TouchableOpacity,
 } from "react-native-gesture-handler";
-import { Text } from "react-native-paper";
+import { Checkbox, Text } from "react-native-paper";
 import buttonStyles from "./styles/ButtonStyles";
 import createAccountStyles from "./styles/CreateAccountStyles";
 import styles from "./styles/Styles";
@@ -56,11 +56,10 @@ const CrearCuenta = ({ navigation }) => {
   anioInicio: { anioInicio },
   anioFinalizacion: { anioFinalizacion },
   buscaEmpleo: { buscaEmpleo },
-  
 }
   return (
     <>
-      <View style={styles.containerApp}>
+      <View>
         <ScrollView contentContainerStyle={styles.scrollView}>
           <Text>Nombre</Text>
           <TextInput
@@ -129,7 +128,7 @@ const CrearCuenta = ({ navigation }) => {
             name="cargo mas reciente"
           />
           <View style={createAccountStyles.inputCreateNacimientoArea}>
-            <CheckBox
+            <Checkbox
               value={isSelected}
               onValueChange={setSelection}
               style={createAccountStyles.checkbox}
@@ -138,7 +137,7 @@ const CrearCuenta = ({ navigation }) => {
           </View>
           <Text style={styles.label}>¿Estás buscando empleo?</Text>
           <View style={createAccountStyles.inputCreateNacimientoArea}>
-            <CheckBox
+            <Checkbox
               value={buscaEmpleo}
               onValueChange={setBuscaEmpleo}
               style={createAccountStyles.checkbox}

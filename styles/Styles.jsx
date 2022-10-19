@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignSelf: "center",
     fontSize: 50,
-    textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+    textShadow: "rgba(0, 0, 0, 0.25)",
   },
   input: {
     alignSelf: "center",
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     backgroundColor: "none",
     position: "relative",
     fontSize: 20,
-    textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+    textShadow: "rgba(0, 0, 0, 0.25)",
   },
   fixToText: {
     flexDirection: "column",

@@ -22,8 +22,8 @@ const createAccountStyles = StyleSheet.create({
     alignSelf: "left",
   },
     label: {
-        margin: 8,
-      },
+      margin: 8,
+   },
   
   inputCreateNacimiento: {
     width: 90,
@@ -31,9 +31,8 @@ const createAccountStyles = StyleSheet.create({
     height: 32,
     borderRadius: 10,
     borderBottomWidth: 3,
-    alignSelf: "stretch",
-    textAlign: "space-between",
-    
+    alignSelf: 'stretch',
+    textAlign:'center',
     borderWidth: 1,
     fontSize: 25,
     borderColor: "rgba(0, 0, 0, 0.25)",

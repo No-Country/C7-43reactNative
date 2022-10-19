@@ -1,12 +1,12 @@
 import 'react-native-gesture-handler';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Image, Text, View, TextInput, TouchableOpacity} from 'react-native';
 import loginStyles from '../styles/LoginStyles';
 import buttonStyles from '../styles/ButtonStyles'
 import { useState } from 'react';
 import { Entypo } from '@expo/vector-icons';
 import { getUser } from '../utilities/services';
-import axios from 'axios';
+
 
 
 
