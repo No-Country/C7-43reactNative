@@ -21,10 +21,6 @@ export const getBussines = () => {
 }
 
 
-
-
-
-
 export const getUser = () => {
 
     return new Promise((resolve, reject) => ( fetch('http://192.168.1.66:4000/api/v1/users',{
@@ -44,6 +40,23 @@ export const getUser = () => {
             },
         )
     ))
+}
+
+export const postUser = () => {
+  return new Promise((resolve, reject) =>
+    fetch("http://localhost:4000/api/v1/users", {
+      method: "POST",
+    })
+        .then(res => res.json())
+        .then((result)=> {
+                    console.log(result)
+                    return resolve (result)  
+            },
+            (error)=> {
+                console.log(error)
+            },
+        )
+    )
 }
 
 

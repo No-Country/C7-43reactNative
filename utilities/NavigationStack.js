@@ -5,6 +5,7 @@ import Home from '../Screens/Home';
 import Login from '../Screens/Login';
 import Profile from '../Screens/Profile';
 import Feed from '../Screens/Feed';
+import CrearCuenta from '../CrearCuenta';
 
 
 const Stack = createStackNavigator();
@@ -48,6 +49,19 @@ export default function NavigationStack(){
             name= "Feed"
             title= ""
             component={Feed}
+            options={{
+            headerStyle: {
+                backgroundColor: 'transparent',
+            },
+            headerTitleStyle:{
+                fontWeight: 'bold',
+            },headerTitleAlign: 'center',
+            }}
+            />
+            <Stack.Screen
+            name= "CrearCuenta"
+            title= "Crear Cuenta"
+            component={CrearCuenta}
             options={{
             headerStyle: {
                 backgroundColor: 'transparent',
