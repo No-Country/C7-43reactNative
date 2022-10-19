@@ -71,3 +71,4 @@ NodeJS: 16.14.0
 
 cullen.maiten@gmail.com
 genesisbetaly@gmail.com
+luisfernandob87@gmail.com

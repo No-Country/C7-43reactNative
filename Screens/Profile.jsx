@@ -1,7 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import { View, SafeAreaView, ScrollView, StyleSheet} from 'react-native';
-import profileStyles from '../styles/ProfileStyles';
 import { LinearGradient } from 'expo-linear-gradient';
 import CardProfile from './components/CardProfile';
 import GreyCard from './components/GreyCard';
@@ -9,33 +8,30 @@ import GreyCard from './components/GreyCard';
 
 const Profile  = ({navigation}) => {
     return(
-    <>
-    <SafeAreaView style={profileStyles.container}>
-        <ScrollView>
-        <View style={profileStyles.linearGradient}>
-        <LinearGradient  
-        colors={['rgba(57, 0, 80, 0.62)', 'transparent' ]}>
-            <CardProfile/>
-        </LinearGradient>
-         </View>
-            <View  style={profileStyles.empleo}>
-               <GreyCard/>    
+    
+    <SafeAreaView style={styles.container}>
+            <ScrollView>
+            <View>
+            <LinearGradient  
+                colors={['rgba(57, 0, 80, 0.62)', 'transparent' ]}>
+                <CardProfile/>
+            </LinearGradient>
+                
+                    <GreyCard/>  
+                    <GreyCard/>  
+                
             </View>
-            <View style={profileStyles.about}>
-            <GreyCard/>    
-            </View>
-            <View  style={profileStyles.destacado}>
-            <GreyCard/>         
-            </View>
-        </ScrollView>
+            </ScrollView>
     </SafeAreaView>
-    </>
+    
     )
 }
+
 const styles = StyleSheet.create({
-container: {
-    flex: 1,
-  },
-});
+    container:{
+      flex:1,
+      backgroundColor:'white',
+    },
+  });
 
 export default Profile;
