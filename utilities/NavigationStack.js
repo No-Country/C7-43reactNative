@@ -5,7 +5,7 @@ import Home from '../Screens/Home';
 import Login from '../Screens/Login';
 import Profile from '../Screens/Profile';
 import Feed from '../Screens/Feed';
-import CrearCuenta from '../CrearCuenta';
+import CrearCuenta from "../Screens/CrearCuenta"
 
 
 const Stack = createStackNavigator();
