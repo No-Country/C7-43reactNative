@@ -37,6 +37,20 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFFFF",
     color: "#6D6A6A",
   },
+  inputCreate: {
+    alignSelf: "center",
+    height: 70,
+    margin: 12,
+    width: 350,
+    borderWidth: 2,
+    padding: 15,
+    borderRadius: 15,
+    position: "relative",
+    borderColor: "#FAFAFA",
+    backgroundColor: "#FFFFFF",
+    color: "#6D6A6A",
+  },
+
   button: {
     height: 20,
     width: 60,
@@ -78,6 +92,12 @@ const styles = StyleSheet.create({
     color: "#00B2FF",
     fontSize: 20,
   },
+  //Creado para probar 
+  btn: {
+    marginTop: 60,
+    marginLeft: 30,
+    marginRight: 30
+  }
 });
-
+  
 export default styles;

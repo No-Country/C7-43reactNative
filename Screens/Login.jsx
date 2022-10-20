@@ -7,13 +7,8 @@ import { useState } from 'react';
 import { Entypo } from '@expo/vector-icons';
 import { getUser } from '../utilities/services';
 
-
-
-
-
 const Login = ({navigation}) => {
 
-    
     const [text, onChangeText] = React.useState('');
     const [ textPass, setTextPass] = useState('');
 
