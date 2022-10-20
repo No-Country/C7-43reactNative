@@ -1,6 +1,9 @@
 import { StyleSheet } from "react-native";
 
 const createAccountStyles = StyleSheet.create({
+  container: {
+    padding: 20
+  },
   inputCreate: {
     width: 289,
     marginBottom: 21,

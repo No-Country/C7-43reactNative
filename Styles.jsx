@@ -2,28 +2,32 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   appContainer: {
-    flex: 1,
+    flex: 2,
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+   
   },
   container: {
     flex: 1,
-    backgroundColor: "black",
-    alignItems: "center",
+
   },
+
   image: {
-    flex: 1,
-    height: 740,
-    width:360,
+    width: '100%', height: '100%',
     flexDirection: "row",
     alignItems: "center",
+    flex: 1,
+    justifyContent: "center",
+    position:"absolute",
+    resizeMode: 'cover',
   },
   logo: {
     height: 154,
     width: 200,
     flexDirection: "row",
     alignSelf: "center",
+    zIndex:20,
   },
   titulo: {
     color: "#FFFFFF",
@@ -33,6 +37,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     fontSize: 50,
     textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+    margintBottom:80,
   },
   input: {
     alignSelf: "center",
@@ -40,9 +45,9 @@ const styles = StyleSheet.create({
     margin: 12,
     width: 200,
     borderWidth: 2,
-    padding: 15,
+    padding: 8,
     borderRadius: 15,
-    position: "relative",
+
     borderColor: "#FAFAFA",
     backgroundColor: "#FFFFFF",
     color: "#6D6A6A",
@@ -76,6 +81,7 @@ const styles = StyleSheet.create({
     position: "relative",
     fontSize: 20,
     textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+    margin:10,
   },
   fixToText: {
     flexDirection: "column",

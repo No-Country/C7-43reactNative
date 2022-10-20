@@ -26,14 +26,14 @@ const loginStyles = StyleSheet.create({
       },
       image:{
           height:194,
-          width:220,
-          shadowColor: 'black',
-          shadowOffset:{
-              width: 0,
-              height: 4,
-          },
-          shadowOpacity: 0.30,
-          shadowRadius: 4.65,
+          // width:220,
+          // shadowColor: 'black',
+          // shadowOffset:{
+          //     width: 0,
+          //     height: 4,
+          // },
+          // shadowOpacity: 0.30,
+          // shadowRadius: 4.65,
       },
       viewInput:{
         flex:2,
