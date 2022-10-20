@@ -13,6 +13,7 @@ import { Entypo } from "@expo/vector-icons";
 
 const Home = ({ navigation }) => {
   const [input, setInput] = useState("");
+  const [ passwordInput, setPasswodInput] = useState("")
 
   return (
     
@@ -22,51 +23,50 @@ const Home = ({ navigation }) => {
           style={styles.image}
           resizeMode="cover"
         />
-       
 
-                  <Image
-                    source={require("../assets/logo-unlimited.png")}
-                    style={styles.logo}
-                  />
+            <Image
+              source={require("../assets/logo-unlimited.png")}
+              style={styles.logo}
+            />
 
-                  <Text style={styles.titulo}> Únete ahora</Text>
-                  <TextInput
-                    style={styles.input}
-                    onChangeText={(input) => setInput(input)}
-                    placeholder="Email"
-                    name="email"
-                    defaultValue={input}
-                    />
+            <Text style={styles.titulo}> Únete ahora</Text>
+            <TextInput
+              style={styles.input}
+              onChangeText={(input) => setInput(input)}
+              placeholder="Email"
+              name="email"
+              defaultValue={input}
+              />
 
-                 
-                  <TextInput
-                    style={styles.input}
-                    onChangeText={(input) => setInput(input)}
-                    placeholder="Contraseña"
-                    keyboardType="numeric"
-                    name="contraseña"
-                    />
-                  <View style={styles.fixToText}>
-                    <Button
-                      style={styles.button}
-                      title="Unirse"
-                      onPress={() =>
-                        navigation.navigate("CrearCuenta", { name: "CrearCuenta" })
-                      }
-                      accessibilityLabel="Crear una cuenta"
-                      />
-                    <Entypo name="circular-graph" size={15} color="#6D6A6A" />
-                  </View>
-                  <View style={styles.redireccionar}>
-                    <Text style={styles.textoInferior}>¿Ya estás en Unlimited?</Text>
-                    <Text
-                      onPress={() => navigation.navigate("Login", { name: "Login" })}
-                      style={styles.content}
-                      >
-                      Iniciar sesión
-                    </Text>
-          </View>
-                    
+            
+            <TextInput
+              style={styles.input}
+              onChangeText={(passwordInput) => setPasswodInput(passwordInput)}
+              placeholder="Contraseña"
+              keyboardType="numeric"
+              name="contraseña"
+              secureTextEntry={true}
+              />
+            <View style={styles.fixToText}>
+              <Button
+                style={styles.button}
+                title="Unirse"
+                onPress={() =>
+                  navigation.navigate("CrearCuenta", { name: "CrearCuenta" })
+                }
+                accessibilityLabel="Crear una cuenta"
+                />
+              <Entypo name="circular-graph" size={15} color="#6D6A6A" />
+            </View>
+            <View style={styles.redireccionar}>
+              <Text style={styles.textoInferior}>¿Ya estás en Unlimited?</Text>
+              <Text
+                onPress={() => navigation.navigate("Login", { name: "Login" })}
+                style={styles.content}
+                >
+                Iniciar sesión
+              </Text>
+          </View>                  
       </ScrollView>
 
   );

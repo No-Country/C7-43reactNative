@@ -10,40 +10,32 @@ import { getUser } from '../../utilities/services';
 
 
 const CardProfile = () => {
-    const [profileData, setProfileData] = useState([])
+const [userData, setUserData] = useState({})
 
     useEffect (()=> {
-    getUser().then((resp) => {
-      resp.data.users.map((usuario) => {
-        setProfileData(profileData => [...profileData, {...usuario}]);
+    getUser().then((resp) => { setUserData(resp.data.user)
+        
     })
-  })
-  },[]);
-        return(
-            <>
-            {profileData?.map((usuario, index) => {
-                return (
-                    <View>
-                    <Card title='nombre'
-                    key={index}
-                        style={stylesCard.profile}            
-                         mode='contained'
-                         accessible="toucheable"
-                       >
-                    <Card.Content>
-                    <Image 
-                    source={require('../../assets/profile.png')} />
-                       <Title>{usuario.nombre}</Title>
-                       <Paragraph>{usuario.email}</Paragraph>
-                        <Paragraph>Provincia</Paragraph>
-                    </Card.Content>
-                    </Card>
-                </View>
-                )
-            })
-            }     
-            </>     
-        )
+    console.log(userData, "respuesta")
+  },[])
+            
+        return (
+            <View>
+            <Card title='titleLarge'
+                style={stylesCard.profile}            
+                 mode='contained'
+                accessible="toucheable"
+                >
+            <Card.Content>
+            <Image 
+            source={require('../../assets/profile.png')} />
+                <Title>{userData.nombre}</Title>
+                <Paragraph>{userData.apellido}</Paragraph>
+                <Paragraph>{userData.email}</Paragraph>
+            </Card.Content>
+            </Card>
+        </View>
+        )    
 }
 
 export default CardProfile ;

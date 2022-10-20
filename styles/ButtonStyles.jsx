@@ -14,10 +14,10 @@ botonIngresar:{
     alignItems:'center',
 },
 botonGoogle:{
-   backgroundColor: '#F5F5F5',
-   width:217,
-   borderRadius:10,
-   margin:5,
+   backgroundColor: '#2eabe2',
+   width:200,
+   borderRadius:20,
+   margin:15,
    padding:5,
    alignItems:'center',
 }
