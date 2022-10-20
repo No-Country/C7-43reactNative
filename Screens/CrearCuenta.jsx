@@ -97,6 +97,7 @@ const CrearCuenta = ({ navigation }) => {
           placeholder="Ingresa tu password"
           name="password"
           defaultValue=""
+          secureTextEntry={true}
         />
         <Text>Sobre vos</Text>
         <TextInput
