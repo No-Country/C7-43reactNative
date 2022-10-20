@@ -1,6 +1,6 @@
 export const getBussines = () => {
 
-    return new Promise((resolve, reject) => ( fetch('http://192.168.1.66:4000/api/v1/empresas',{
+    return new Promise((resolve, reject) => ( fetch('https://unlimited-app.herokuapp.com/api/v1/empresas',{
         headers:{
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*',
@@ -23,7 +23,7 @@ export const getBussines = () => {
 
 export const getUser = () => {
 
-    return new Promise((resolve, reject) => ( fetch('http://192.168.1.66:4000/api/v1/users',{
+    return new Promise((resolve, reject) => ( fetch('https://unlimited-app.herokuapp.com/api/v1/users',{
         headers:{
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*',
