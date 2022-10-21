@@ -18,7 +18,6 @@ const CardJob = ({navigation}) => {
       
   })
 })
-console.log(ofertaData, "la data")
 },[]);
 
   return ( 

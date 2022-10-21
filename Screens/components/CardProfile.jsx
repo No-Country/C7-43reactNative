@@ -16,7 +16,6 @@ const [userData, setUserData] = useState({})
     getUser().then((resp) => { setUserData(resp.data.user)
         
     })
-    console.log(userData, "respuesta")
   },[])
             
         return (

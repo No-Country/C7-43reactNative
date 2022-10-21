@@ -9,7 +9,7 @@ export const getBussines = () => {
     })
         .then(res => res.json())
         .then((result)=> {
-                    console.log(result)
+                
                     return resolve (result)  
             },
             (error)=> {
@@ -58,7 +58,7 @@ export const postUser = () => {
       .then((res) => res.json())
       .then(
         (result) => {
-          console.log(result);
+    
           return resolve(result);
         },
         (error) => {
@@ -80,7 +80,6 @@ export const getOffer = () => {
   })
       .then(res => res.json())
       .then((result)=> {
-                  console.log(result)
                   return resolve (result)  
           },
           (error)=> {
@@ -92,6 +91,3 @@ export const getOffer = () => {
 }
 
 
-// let clientWidth = document.getElementById('containerProfile').clientWidth;
-// let clientHeight = document.getElementById('containerProfile').clientHeight;
-// console.log(clientWidth, "largo", clientHeight, "ancho")
