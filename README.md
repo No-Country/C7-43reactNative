@@ -49,26 +49,26 @@ Instalación de React Native:
 ## Tecnologias aplicadas
 Lista de tecnologías utilizadas en el proyecto:
 
-HTML5
-CSS3
-JAVASCRIPT
-REACT: 18.0.0
-REact-dom:18.0.0
-REACT Native: 0.69.6
-REACT-native-gesture-handler": ~2.5.0
-REACT-native-linear-gradient": ^2.6.2
-REACT-native-paper": 5.0.0-rc.6
-REACT-native-safe-area-context": 4.3.1
-REACT-native-screens": ~3.15.0
- REACT-native-vector-icons": ^9.2.0,
-REACT-native-web": ^0.18.9
-NodeJS: 16.14.0
+-HTML5
+-CSS3
+-JAVASCRIPT
+-REACT: 18.0.0
+-REact-dom:18.0.0
+-REACT Native: 0.69.6
+-REACT-native-gesture-handler": ~2.5.0
+-REACT-native-linear-gradient": ^2.6.2
+-REACT-native-paper": 5.0.0-rc.6
+-REACT-native-safe-area-context": 4.3.1
+-REACT-native-screens": ~3.15.0
+-REACT-native-vector-icons": ^9.2.0,
+-REACT-native-web": ^0.18.9
+-NodeJS: 16.14.0
 
 ## devDependencies
  Babel/core:7.12.9
 
 ## Contacto
 
-cullen.maiten@gmail.com
-genesisbetaly@gmail.com
-luisfernandob87@gmail.com
+- cullen.maiten@gmail.com
+- genesisbetaly@gmail.com
+- luisfernandob87@gmail.com
