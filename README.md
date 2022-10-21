@@ -10,7 +10,7 @@ así como también generar un nexo directo con las empresas sin intermediarios.
 ## Gif proyecto
 - link de navegación
 #proximamente
-## Como instalar?
+## ¿Cómo instalar?
  - Es preciso tener previamente instalado NODE JS. 
  
 Instalación de React Native:
@@ -40,7 +40,7 @@ Instalación de React Native:
 
 ## Deploy
 -Esta app fue deployada a través de Expo. Para poder visualizarla, descargá la aplicación en Expo.
-![UnlimitedApp Deployed]("./assets/codigo-expo-app.png")
+![UnlimitedApp Deployed]("/assets/codigo-expo-app.png")
 
 
 ## Available Scripts
