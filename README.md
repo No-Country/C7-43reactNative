@@ -40,7 +40,7 @@ Instalación de React Native:
 
 ## Deploy
 -Esta app fue deployada a través de Expo. Para poder visualizarla, descargá la aplicación en Expo.
-![UnlimitedApp Deployed]("/assets/codigo-expo-app.png")
+![UnlimitedApp Deployed]("./assets/codigo-expo-app.png")
 
 
 ## Available Scripts
