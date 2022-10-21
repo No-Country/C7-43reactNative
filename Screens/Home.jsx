@@ -16,7 +16,7 @@ import { TouchableOpacity } from "react-native";
 
 const Home = ({ navigation }) => {
   const [input, setInput] = useState("");
-  const [ passwordInput, setPasswodInput] = useState("")
+  const [ passwordInput, setPasswordInput] = useState("")
 
   return (
     <>
@@ -42,7 +42,7 @@ const Home = ({ navigation }) => {
 
             <TextInput
               style={styles.input}
-              onChangeText={(input) => setInput(input)}
+              onChangeText={(passwordInput) => setPasswordInput(passwordInput)}
               placeholder="Contraseña"
               keyboardType="numeric"
               name="contraseña"
