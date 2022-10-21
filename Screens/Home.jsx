@@ -46,6 +46,7 @@ const Home = ({ navigation }) => {
               placeholder="Contraseña"
               keyboardType="numeric"
               name="contraseña"
+              defaultValue={passwordInput}
             />
             <View style={styles.fixToText}>
               <TouchableOpacity
