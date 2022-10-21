@@ -46,6 +46,7 @@ const Home = ({ navigation }) => {
               placeholder="Contraseña"
               keyboardType="numeric"
               name="contraseña"
+              secureTextEntry={true}
               defaultValue={passwordInput}
             />
             <View style={styles.fixToText}>

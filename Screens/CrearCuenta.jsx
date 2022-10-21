@@ -35,7 +35,6 @@ const CrearCuenta = ({ navigation }) => {
       password,
       acerca_de_mi,
     });
-    console.log(usuario);
   };
 
   const enviarDatos = () => {
