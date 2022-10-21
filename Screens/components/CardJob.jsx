@@ -1,8 +1,8 @@
 import 'react-native-gesture-handler';
 import React, { useEffect, useState } from 'react';
 import { Card ,Avatar, IconButton, Paragraph, Title, Button } from 'react-native-paper';
-import { getBussines } from '../../utilities/services';
-import { StyleSheet } from 'react-native';
+import { getBussines, getOffer } from '../../utilities/services';
+import { StyleSheet, Text } from 'react-native';
 
 
 
@@ -10,30 +10,30 @@ const RightContent = () => <Avatar.Image size={35} source={require('../../assets
 
 
 const CardJob = ({navigation}) => {
-  const [bussinesData, setBussinesData] = useState([])
-  
-
+  const [ofertaData, setOfertaData] = useState([])
   useEffect (()=> {
-  getBussines().then((resp) => {
-    resp.data.empresas.map((empresa) => {
-      setBussinesData(bussinesData => [...bussinesData, {...empresa}]);
+    getOffer().then((resp) => {
+    resp.data.ofertas.map((oferta) => {
+      setOfertaData(ofertaData => [...ofertaData, {...oferta}]);
+      
   })
 })
+console.log(ofertaData, "la data")
 },[]);
 
   return ( 
     <>
-    {bussinesData?.map((empresa, index) => {
+    {ofertaData?.map((oferta, index) => {
       return ( 
     <Card key={index}>
-        <Card.Title title="nombre empresa" subtitle="Localidad" right={RightContent} style={styles.rightStyle} />
+        <Card.Title title={oferta.empresa.nombre} subtitle={oferta.empresa.ubicacion} right={RightContent} style={styles.rightStyle} />
         <Card.Content>
-          <Title>{empresa.nombre}</Title>
-          <Paragraph>Descripcion blab bla bla</Paragraph>
+          <Title>{oferta.nombre}</Title>
+          <Paragraph>{oferta.rol}</Paragraph>
+          <Paragraph>{oferta.tipo_contratacion}</Paragraph>
         </Card.Content>
         <Card.Actions> 
-          <Button onPress={()=> onClick()} >No aplicar</Button>
-          <Button buttonColor="#2eabe2">Aplicar</Button>
+          <Button buttonColor='#2eabe2'>Aplicar</Button>
         </Card.Actions>
       </Card>
       )

@@ -16,6 +16,7 @@ import { TouchableOpacity } from "react-native";
 
 const Home = ({ navigation }) => {
   const [input, setInput] = useState("");
+  const [ passwordInput, setPasswodInput] = useState("")
 
   return (
     <>

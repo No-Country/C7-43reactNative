@@ -14,7 +14,8 @@ const Login = ({navigation}) => {
 
        const onLoginClick = async () => {
         await getUser()
-        .then(()=> navigation.navigate('Profile'))
+    
+         .then(()=> navigation.navigate('Profile'))
     }
 
     return (
@@ -36,6 +37,7 @@ const Login = ({navigation}) => {
                     <TextInput style={loginStyles.input} 
                     placeholder="Contraseña"
                     onChangeText={setTextPass}
+                    secureTextEntry={true}
                     value={textPass}
                     />
                 </View>

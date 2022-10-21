@@ -93,6 +93,7 @@ const CrearCuenta = ({ navigation }) => {
           placeholder="Ingresa tu password"
           name="password"
           defaultValue=""
+          secureTextEntry={true}
         />
         <Text>Redactá tu CV acá</Text>
         <TextInput
