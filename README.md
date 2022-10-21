@@ -1,12 +1,11 @@
 # C7-43reactNative
 
-# app incluirTrabajo App
 # UnLimited
 
-UnLimited es una propuesta de app mobile enfocada en la busqueda de empleo, enfocada en poder brindar oportunidades laborales reales a personas con discapacidad,
-donde los usuarios puedan de manera autonoma administras sus perfiles, subir su CV y aplicar a las diversas ofertas de trabajo.
+UnLimited es una propuesta de app mobile enfocada en la búsqueda de empleo, su objetivo es poder brindar oportunidades laborales reales a personas con discapacidad,
+donde los usuarios puedan de manera autónoma administrar sus perfiles, subir su CV y aplicar a las diversas ofertas de trabajo.
 Nace de la necesidad de crear nuevas oportunidades para las personas, poder mostrar sus perfiles profesionales y de oficios al mundo,
-como asi tambien generar un nexo directo con las empresas sin intermediarios
+así como también generar un nexo directo con las empresas sin intermediarios.
 
 ## Gif proyecto
 - link de navegación
@@ -38,6 +37,10 @@ Instalación de React Native:
 
 ## Es necesario tengas donde poder correr la app en mobile. 
 - Expo Go es la app disponible en para su descarga desde Android o IOS
+
+## Deploy
+-Esta app fue deployada a través de Expo. Para poder visualizarla, descargá la aplicación en Expo.
+![UnlimitedApp Deployed]("/assets/codigo-expo-app.png")
 
 
 ## Available Scripts
