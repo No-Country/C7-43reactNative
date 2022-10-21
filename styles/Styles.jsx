@@ -4,6 +4,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
+
+  },
+  scrollView:{
+    backgroundColor:"white",
   },
   image: {
     flex: 1,
@@ -17,7 +21,6 @@ const styles = StyleSheet.create({
   },
   titulo: {
     color: "#FFFFFF",
-    backgroundColor: "none",
     position: "relative",
     flexDirection: "row",
     alignSelf: "center",
@@ -33,21 +36,20 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 15,
     position: "relative",
-    borderColor: "#FAFAFA",
-    backgroundColor: "#FFFFFF",
     color: "#6D6A6A",
+    borderBottomWidth:2,
   },
   inputCreate: {
+    borderBottomColor: "rgba(0, 0, 0, 0.25)",
     alignSelf: "center",
     height: 70,
+    backgroundColor:"rgba(109, 106, 106, 0.07)",
     margin: 12,
     width: 350,
-    borderWidth: 2,
+    borderBottomWidth: 4,
+    borderColor:"#6D6A6A",
     padding: 15,
     borderRadius: 15,
-    position: "relative",
-    borderColor: "#FAFAFA",
-    backgroundColor: "#FFFFFF",
     color: "#6D6A6A",
   },
 

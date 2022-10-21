@@ -5,12 +5,9 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native-gesture-handler";
-import { Checkbox } from "react-native-paper";
-import buttonStyles from "../styles/ButtonStyles";
 import createAccountStyles from "../styles/CreateAccountStyles";
 import styles from "../styles/Styles";
-import loginStyles from "../styles/LoginStyles";
-import { postUser } from "../utilities/services";
+
 import { Button } from "react-native-paper";
 
 const CrearCuenta = ({ navigation }) => {
@@ -53,7 +50,6 @@ const CrearCuenta = ({ navigation }) => {
         .then((res) => res.json())
         .then(
           (result) => {
-            console.log(result);
             return resolve(result);
           },
           (error) => {
@@ -99,11 +95,11 @@ const CrearCuenta = ({ navigation }) => {
           defaultValue=""
           secureTextEntry={true}
         />
-        <Text>Sobre vos</Text>
+        <Text>Redactá tu CV acá</Text>
         <TextInput
          style={styles.inputCreate}
           onChangeText={(acerca_de_mi) => setAcercaDeMi(acerca_de_mi)}
-          placeholder="Conta un poco de vos"
+          placeholder="Estudios, habilidades y experiencia laboral."
           name="acerca_de_mi"
           defaultValue=""
         />

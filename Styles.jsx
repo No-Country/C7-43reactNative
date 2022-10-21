@@ -1,53 +1,51 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  appContainer: {
-    flex: 2,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-   
+  scrollView: {
+    backgroundColor: "black",
+    height: "100%",
   },
   container: {
     flex: 1,
-
+    flexDirection: "column",
   },
-
   image: {
-    width: '100%', height: '100%',
-    flexDirection: "row",
-    alignItems: "center",
+    height: "100%",
+    width: "100%",
     flex: 1,
-    justifyContent: "center",
-    position:"absolute",
-    resizeMode: 'cover',
+  },
+  text: {
+    color: "grey",
+    fontSize: 30,
+    fontWeight: "bold",
   },
   logo: {
-    height: 154,
-    width: 200,
+    height: 254,
+    width: 250,
     flexDirection: "row",
     alignSelf: "center",
-    zIndex:20,
+    marginBottom: 10,
   },
   titulo: {
     color: "#FFFFFF",
-    backgroundColor: "none",
-    position: "relative",
+    marginTop: 80,
+    marginBottom: 20,
     flexDirection: "row",
     alignSelf: "center",
     fontSize: 50,
+    
     textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-    margintBottom:80,
+    margintBottom: 80,
   },
   input: {
     alignSelf: "center",
     height: 40,
     margin: 12,
-    width: 200,
+    width: 265,
     borderWidth: 2,
-    padding: 8,
+    paddingStart:8,
     borderRadius: 15,
-
+    fontSize:24,
     borderColor: "#FAFAFA",
     backgroundColor: "#FFFFFF",
     color: "#6D6A6A",
@@ -63,25 +61,18 @@ const styles = StyleSheet.create({
     color: "#7B61FF",
     position: "absolute",
   },
-  buttonFake: {
-    height: 40,
-    width: 200,
-    margin: 20,
-    borderWidth: 2,
-    border: "solid",
-    borderRadius: 20,
-    color: "#FFFFFF",
-  },
   redireccionar: {
     flexDirection: "row",
+    marginTop: 70,
+    alignSelf: "center",
+    padding: 2,
   },
   textoInferior: {
     color: "#FFFFFF",
     backgroundColor: "none",
-    position: "relative",
+
     fontSize: 20,
     textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-    margin:10,
   },
   fixToText: {
     flexDirection: "column",
@@ -89,12 +80,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   content: {
-    backgroundColor: "none",
-    position: "relative",
-    color: "#00B2FF",
+    color: "#",
     fontSize: 20,
+    color: "#00B2FF",
   },
- 
+  circle: {
+    marginVertical: 30,
+  },
 });
 
 export default styles;
