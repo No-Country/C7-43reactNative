@@ -23,7 +23,7 @@ export const getBussines = () => {
 
 
 export const getUser = () => {
-    return new Promise((resolve, reject) => ( fetch('https://unlimited-app.herokuapp.com/api/v1/users/12',{
+    return new Promise((resolve, reject) => ( fetch('https://unlimited-app.herokuapp.com/api/v1/users/',{
         headers:{
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*',

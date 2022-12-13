@@ -1,5 +1,7 @@
 # C7-43reactNative
-
+exp://exp.host/@maiten18/C7-43?release-channel=default
+- Expo-app
+- Podes escanear el codigo desde tu dispositivo con la app Expo
 # app incluirTrabajo App
 # UnLimited
 
